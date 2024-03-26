@@ -15,6 +15,8 @@ This will provide an export of all your associated Garmin data.
 
 ./sleep_parse.py  ~/garmin/DI_CONNECT/DI-Connect-Wellness/2023-12-16_2024-03-25_45940832_sleepData.json 
 
+./stress_parse.py ~/garmin/DI_CONNECT/DI-Connect-Aggregator/UDSFile_2023-12-16_2024-03-25.json
+
 # Display in Obsidian
 
 Obsidian: https://obsidian.md/
