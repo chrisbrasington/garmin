@@ -1,3 +1,21 @@
+# Total
+```dataviewjs
+const data = await dv.io.csv("garmin_sleep.csv");
+const rows = data.values;
+
+const chartData = {
+    type: 'line',
+    data: {
+        labels: rows.map(r => r["sleepStartTimestampGMT"]),
+        datasets: [
+	        {label: 'Total', data: rows.map(r => (r["remSleepSeconds"]+r["remSleepSeconds"]+r["lightSleepSeconds"])/3600), backgroundColor: 'teal', borderColor: 'teal', lineTension: 0.4 }
+        ],
+    },
+}
+
+window.renderChart(chartData, this.container);
+```
+# Multiple
 
 ```dataviewjs
 const data = await dv.io.csv("garmin_sleep.csv");
@@ -18,3 +36,4 @@ const chartData = {
 
 window.renderChart(chartData, this.container);
 ```
+
