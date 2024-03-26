@@ -1,22 +1,3 @@
-# Steps
-
-```dataviewjs
-const data = await dv.io.csv("daily.csv");
-const rows = data.values;
-
-const chartData = {
-    type: 'line',
-    data: {
-        labels: rows.map(r => r["calendarDate"]),
-        datasets: [
-	        {label: 'Steps', data: rows.map(r => r["totalSteps"]), backgroundColor: 'teal', borderColor: 'teal', lineTension: 0.4 }
-        ],
-    },
-}
-
-window.renderChart(chartData, this.container);
-```
-
 # Heart Rate
 ```dataviewjs
 const data = await dv.io.csv("daily.csv");
@@ -105,6 +86,24 @@ const chartData = {
              borderColor: 'green', 
              lineTension: 0.4 
             }
+        ],
+    },
+}
+
+window.renderChart(chartData, this.container);
+```
+# Steps
+
+```dataviewjs
+const data = await dv.io.csv("daily.csv");
+const rows = data.values;
+
+const chartData = {
+    type: 'line',
+    data: {
+        labels: rows.map(r => r["calendarDate"]),
+        datasets: [
+	        {label: 'Steps', data: rows.map(r => r["totalSteps"]), backgroundColor: 'teal', borderColor: 'teal', lineTension: 0.4 }
         ],
     },
 }
